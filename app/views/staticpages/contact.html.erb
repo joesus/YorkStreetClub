@@ -1,0 +1,19 @@
+<% provide(:title, 'Contact Us') %>
+<h1>Contact Us</h1>
+
+<div class="container-fluid span6 offset3 pull-left" id='contact'>
+<!--     		    <%= link_to "http://www.aa.org", :target => "_blank", class: "pull-left" do %>
+            <i class="icon-globe"></i>
+            <%= t("Official Alcoholics Anonymous Site") %>
+            <% end %>
+ -->            <br>
+		<%= link_to "http://maps.google.com/?q=1311 York St, Denver, CO, 80206", :target => "_blank", class: "pull-left" do %>
+            <i class="icon-map-marker"></i>
+            <%= t(:Directions) %>
+            <% end %>
+            <br>
+            <%= mail_to "joesusnick@gmail.com", class: "pull-left" do %>
+            <i class="icon-envelope"></i>
+            <%= t("Email Us") %>
+            <% end %>
+</div>

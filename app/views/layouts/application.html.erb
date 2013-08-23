@@ -1,14 +1,35 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>YorkStreetClub</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= full_title(yield(:title)) %></title>
+    <%= csrf_meta_tags %>
+    <%= render 'layouts/shim' %>   
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= render 'layouts/device_specific' %>
+    <%= javascript_include_tag "application" %>
+    <!-- Tried calling the script from partial _cal.html.erb instead of a .js file with the same info, didn't fix anything, 
+    not sure why I thought it might. -->
+  </head>
 
-<%= yield %>
+  <body>
 
-</body>
+  <!-- <div id='calendar' style='display: none'></div> 
+  Thought I could initialize it in the layout
+  then call it again in the schedule view. Didn't work. -->
+
+  <%= render 'layouts/header' %>
+<p id="bodytop"></p>
+  
+          <%= bootstrap_flash %>
+          <%= yield %>
+          <%= debug(params) if Rails.env.development? %>
+
+  <%= render 'layouts/footer' %>
+
+    </div>
+
+  </body>
 </html>

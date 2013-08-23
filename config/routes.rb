@@ -1,4 +1,15 @@
 YorkStreetClub::Application.routes.draw do
+  
+  root "static_pages#home"
+
+  match '/about',       to: 'static_pages#about',       via: 'get'
+  match '/schedule',    to: 'static_pages#schedule',    via: 'get'
+  match '/rules',       to: 'static_pages#rules',       via: 'get'
+  match '/sponsors',    to: 'static_pages#sponsors',    via: 'get'
+  match '/service',     to: 'static_pages#service',     via: 'get'
+  match '/contact',     to: 'static_pages#contact',     via: 'get'
+  match '/membership',  to: 'static_pages#member',      via: 'get'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,154 @@
+/* mixins, variables, etc. */
+/* Using grayLight is part of Less, except the Sass version has a $ */	
+
+
+
+/* Universal */ 
+
+
+
+$grayMediumLight: #eaeaea;
+@mixin box_sizing
+ {-moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+
+#home {
+	margin-top: 5px;
+}
+
+
+
+/* Table Header */
+
+
+
+.container #usechild {
+			font-weight: bold;
+			font-size: 5em;
+}
+
+a {
+	color: inherit;
+}
+
+
+
+/* Body */
+
+
+
+body { 
+	text-align: center;
+	}
+	@media (max-width: 979px) {
+		body {
+			padding-top: 0;
+		}
+	}
+
+textarea {
+	resize: vertical;
+}
+
+#bodytop {
+	padding-top: 40px;
+}
+
+
+/* Header */ 
+
+
+
+#header {
+	background-color: #eeeeee;
+	margin-top: 0px;
+}
+
+// #brandleft {
+// 	margin-left: 0px;
+// }
+
+.navbar {
+	margin-bottom: 5px;
+	padding-top:0px;
+	.brand {
+		margin-top: 3px;
+		padding-left: 5px;
+	}
+}
+
+.navbar-fluid-top {
+	padding-top: 0px;
+}
+
+#changebutton {
+	color: #777777;
+	margin-right: -5px;
+	margin-bottom: 3px;
+}
+
+#caret {
+	border-top:	9px solid #777777;
+}
+
+.navbar-inner {
+	padding-right: 10px;
+	padding-left: 8px;
+}
+
+/* RulesPage */
+
+#rules {
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	line-height: 200%;
+}
+
+#rules-header {
+	text-align: center;
+	font-weight: bold;
+	border-bottom: solid 2px;
+ }
+
+.rules {
+
+	text-align: center;
+	span {
+		color: red;
+	}
+}
+
+/* Contact Page */
+
+#contact {
+	margin-top: 20px;
+	margin-bottom: 45px;
+	a {
+		text-align: left;
+	}
+}
+
+/* Debug Box */
+
+.debug_dump {
+   clear: both;
+   float: left;
+   width: 100%;
+   margin-top: 45px;
+   @include box_sizing; }
+
+
+/* Footer */
+
+#footer {
+	border-top: 1px solid #eeeeee; 
+	margin-top: 45px;
+	padding-top: 10px;
+	clear: both;
+}
+
+
+
+
