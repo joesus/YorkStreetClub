@@ -10,11 +10,5 @@ class StaticPagesController < ApplicationController
 
   def rules
   end
-
-  def forsponsors
-  end
-
-  def forservice
-  end
   
 end

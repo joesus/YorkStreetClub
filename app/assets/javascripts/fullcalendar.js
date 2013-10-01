@@ -288,13 +288,14 @@ function Calendar(element, options, eventSources) {
 		if (!bodyVisible()) {
 			lateRender();
 		}
-
+    
+    // changed view to Day when loading in phone. 
 		if ( $(window).width() < 480){
 			changeView('agendaDay')
 		};
 
 	}
-	// changed view to Day when loading in phone. 
+	
 	
 	// called when we know the calendar couldn't be rendered when it was initialized,
 	// but we think it's ready now

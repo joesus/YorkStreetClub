@@ -1,26 +1,29 @@
-// $(document).ready(function() {
+$(document).on('ready page:load', function(){
 
-//     // page is now ready, initialize the calendar...
-//     // 
-        
-//     $('#calendar').fullCalendar({
-//        events: 'http://www.google.com/calendar/feeds/1311yorkstreetclub%40gmail.com/public/basic', 
+    $('#calendar').fullCalendar({
 
-//           weekMode: 'liquid',
+       events: 'http://www.google.com/calendar/feeds/1311yorkstreetclub%40gmail.com/public/basic', 
+
+          weekMode: 'liquid',
           
-//           height: 600,
+          height: 600,
 
-//           defaultView: 'agendaWeek',
+          defaultView: 'agendaWeek',
 
-//           allDaySlot: false,
+          allDaySlot: false,
 
-//             header: {
-//                       left: 'title',
-//                       center: 'agendaDay,agendaWeek,month',
-//                       right: 'today prev,next'
-//             }
-
-
-//     });
-// });
-// Tried to initialize differently, didn't change anything.
+            header: {
+                      left: 'title',
+                      center: 'agendaDay,agendaWeek,month',
+                      right: 'today prev,next'
+            },
+     
+    windowResize: function(view) {
+      if ($(window).width() < 514){
+        $('#calendar').fullCalendar( 'changeView', 'agendaDay' );
+      } else {
+        $('#calendar').fullCalendar( 'changeView', 'agendaWeek' );
+      }
+    }
+  });
+});
