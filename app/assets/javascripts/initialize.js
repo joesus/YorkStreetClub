@@ -2,7 +2,7 @@ $(document).on('ready page:load', function(){
 
     $('#calendar').fullCalendar({
 
-       events: 'http://www.google.com/calendar/feeds/1311yorkstreetclub%40gmail.com/public/basic',
+       events: 'https://www.google.com/calendar/feeds/1311yorkstreetclub%40gmail.com/public/basic',
 
           weekMode: 'liquid',
           
@@ -26,4 +26,5 @@ $(document).on('ready page:load', function(){
       }
     }
   });
+    // $('#calendar').fullCalendar('render');
 });
