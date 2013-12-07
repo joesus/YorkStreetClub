@@ -10,16 +10,9 @@
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= render 'layouts/device_specific' %>
     <%= javascript_include_tag "application" %>
-    <!-- Tried calling the script from partial _cal.html.erb instead of a .js file with the same info, didn't fix anything, 
-    not sure why I thought it might. -->
   </head>
 
   <body>
-
-  <!-- <div id='calendar' style='display: none'></div> 
-  Thought I could initialize it in the layout
-  then call it again in the schedule view. Didn't work. -->
-
   <%= render 'layouts/header' %>
 <p id="bodytop"></p>
   
