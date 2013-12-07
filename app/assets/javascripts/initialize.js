@@ -2,7 +2,7 @@ $(document).on('ready page:load', function(){
 
     $('#calendar').fullCalendar({
 
-       events: 'http://www.google.com/calendar/feeds/1311yorkstreetclub%40gmail.com/public/basic', 
+       events: 'http://www.google.com/calendar/feeds/1311yorkstreetclub%40gmail.com/public/basic',
 
           weekMode: 'liquid',
           
@@ -17,7 +17,7 @@ $(document).on('ready page:load', function(){
                       center: 'agendaDay,agendaWeek,month',
                       right: 'today prev,next'
             },
-     
+
     windowResize: function(view) {
       if ($(window).width() < 514){
         $('#calendar').fullCalendar( 'changeView', 'agendaDay' );
@@ -26,5 +26,4 @@ $(document).on('ready page:load', function(){
       }
     }
   });
-    $('#calendar').fullCalendar('render');
 });
